@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PropertyGridOptions xmlns="http://BlueToque.ca/CodeGeneration/CodeModifiers/PropertyGrid.Options">
+  <Property QualifiedName="" Category="" Browsable="true"  ReadOnly="true" />
+  <Property QualifiedName="" Category="" Browsable="1" Description="" DisplayName="" Editor="" ReadOnly="1"/>
+  <Property QualifiedName="" Category=""/>
+</PropertyGridOptions>

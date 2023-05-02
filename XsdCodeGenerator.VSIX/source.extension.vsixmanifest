@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+    <Metadata>
+        <Identity Id="XsdCodeGenerator.VSIX.95c78a75-2f0b-4ab6-a585-dac39bd81d10" Version="2.23.0502" Language="en-US" Publisher="Blue Toque Software" />
+        <DisplayName>XsdCodeGenerator</DisplayName>
+        <Description xml:space="preserve">Generate code from Xml Schema Documents</Description>
+        <MoreInfo>https://bluetoque.ca/products/xsdtoclasses/</MoreInfo>
+        <License>Resources\GPL.rtf</License>
+        <GettingStartedGuide>Resources\XsdCodeGenerator.docx</GettingStartedGuide>
+        <Icon>Resources\XSDSchemaToCode.ico</Icon>
+        <PreviewImage>Resources\preview 2.png</PreviewImage>
+        <Tags>xml,xsd,code,generator,schema,CSharp</Tags>
+    </Metadata>
+    <Installation>
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+    </Installation>
+    <Dependencies>
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    </Dependencies>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />
+    </Prerequisites>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    </Assets>
+</PackageManifest>

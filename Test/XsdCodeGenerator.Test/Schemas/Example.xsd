@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Example"
+    targetNamespace="http://BlueToque.ca/Test.BlueToque.Utility.Example.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://BlueToque.ca/Test.BlueToque.Utility.Example.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:btd="http://BlueToque.ca/Example/Data">
+
+  <xs:import namespace="http://BlueToque.ca/Example/Data" schemaLocation="Data.xsd" />
+
+  <xs:complexType name="Example">  
+    <xs:sequence> 
+      <xs:element name="Items" type="ItemsType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ItemData">
+    <xs:sequence>
+      <xs:any namespace="##local" processContents="lax" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="Value" type="xs:string" />
+    <xs:attribute name="Visible" type="xs:boolean" use="required" />
+    <xs:attribute name="Child" type="xs:boolean" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="ItemDataWithChildren">
+    <xs:complexContent>
+      <xs:extension base="ItemData">
+        <xs:sequence>
+          <xs:element name="DataCollection" type="btd:DataGroup" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="ItemsType">
+    <xs:sequence>
+      <xs:element name="Item" type="ItemData" maxOccurs="unbounded" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

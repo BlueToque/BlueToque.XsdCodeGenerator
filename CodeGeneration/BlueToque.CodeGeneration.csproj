@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3038075D-63C6-495D-ACAC-6D1C0E31BF28}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CodeGeneration</RootNamespace>
+    <AssemblyName>CodeGeneration</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Properties\CodeGeneration.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/CodeGeneration/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeModifiers\AddNonSerialized.cs" />
+    <Compile Include="CodeModifiers\AddNonSerializedEvents.cs" />
+    <Compile Include="CodeModifiers\RemoveObjectBase.cs" />
+    <Compile Include="CodeModifiers\Schemas\ConvertArraysToCollectionsOptions.cs">
+      <DependentUpon>ConvertArraysToCollectionsOptions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CodeModifiers\Schemas\ConvertArraysToCollectionsOptions.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConvertArraysToCollectionsOptions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CodeModifiers\Schemas\ImportFixerOptions.cs">
+      <DependentUpon>ImportFixerOptions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CodeModifiers\Schemas\ImportFixerOptions.Generated.cs">
+      <DependentUpon>ImportFixerOptions.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CodeModifiers\ModifyImports.cs">
+    </Compile>
+    <Compile Include="CodeModifiers\Schemas\ModifyImportsOptions.cs">
+      <DependentUpon>ModifyImportsOptions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CodeModifiers\Schemas\ModifyImportsOptions.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModifyImportsOptions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CodeModifiers\ImportFixer.cs" />
+    <Compile Include="CodeModifiers\RemoveSpecifiedTypes.cs" />
+    <Compile Include="CodeModifiers\BaseCodeModifier.cs" />
+    <Compile Include="CodeModifiers\RemoveDebuggerAttribute.cs" />
+    <Compile Include="CodeModifiers\CodeModifierCollection.cs" />
+    <Compile Include="CodeModifiers\Schemas\RemoveSpecifiedTypesOptions.cs">
+      <DependentUpon>RemoveSpecifiedTypesOptions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CodeModifiers\Schemas\RemoveSpecifiedTypesOptions.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RemoveSpecifiedTypesOptions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CodeModifiers\RemoveXmlTypeAttribute.cs" />
+    <Compile Include="CodeModifiers\Schemas\RemoveXmlTypeAttributeOptions.cs">
+      <DependentUpon>RemoveXmlTypeAttributeOptions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CodeModifiers\Schemas\RemoveXmlTypeAttributeOptions.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RemoveXmlTypeAttributeOptions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErrorMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\CodeGeneratorBase.cs" />
+    <Compile Include="CodeModifiers\AddDocComments.cs" />
+    <Compile Include="CodeModifiers\ConvertArraysToCollections.cs" />
+    <Compile Include="CodeModifiers\ICodeModifier.cs" />
+    <Compile Include="CodeModifiers\StripProxyTypesCodeModifier.cs" />
+    <Compile Include="Generators\BaseCodeGeneratorOptions.cs">
+      <DependentUpon>BaseCodeGeneratorOptions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\BaseCodeGeneratorOptions.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseCodeGeneratorOptions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\ICodeGenerator.cs" />
+    <Compile Include="Generators\XsdClassGeneratorOptions.cs">
+      <DependentUpon>XsdClassGeneratorOptions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\XsdClassGeneratorOptions.Generated.cs">
+      <DependentUpon>XsdClassGeneratorOptions.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="ImporterExtensions\AnnotationTypeExtension.cs" />
+    <Compile Include="ImporterExtensions\codeDomHelper.cs" />
+    <Compile Include="ImporterExtensions\SoapTypeExtension.cs" />
+    <Compile Include="ImporterExtensions\SimpleTypeExtension.cs" />
+    <Compile Include="ImporterExtensions\StripBusinessObjectsSchemaImporterExtension.cs" />
+    <Compile Include="Utility\AssemblyReferenceCollection.cs" />
+    <Compile Include="Utility\FastMethodCall.cs" />
+    <Compile Include="Utility\IMethodCall.cs" />
+    <Compile Include="Utility\MethodCall.cs" />
+    <Compile Include="Utility\MethodCallTools.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\ClassXsdGenerator.cs" />
+    <Compile Include="Utility\Serializer.cs" />
+    <Compile Include="Utility\Trace.cs" />
+    <Compile Include="Generators\TypeProxyGenerator.cs" />
+    <Compile Include="Utility\Utility.cs" />
+    <Compile Include="Generators\WsdlGenerator.cs" />
+    <Compile Include="Generators\WsdlProxyGenerator.cs" />
+    <Compile Include="Generators\XsdClassGenerator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ErrorMessages.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CodeModifiers\Schemas\ImportFixerOptions.xsd">
+      <Generator>XsdCodeGenerator</Generator>
+      <LastGenOutput>ImportFixerOptions.Generated.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>CodeGeneration.CodeModifiers</CustomToolNamespace>
+    </Content>
+    <Content Include="CodeModifiers\Schemas\RemoveXmlTypeAttributeOptions.xsd">
+      <SubType>Designer</SubType>
+      <Generator>XsdCodeGenerator</Generator>
+      <LastGenOutput>RemoveXmlTypeAttributeOptions.Generated.cs</LastGenOutput>
+      <CustomToolNamespace>CodeGeneration.CodeModifiers</CustomToolNamespace>
+    </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CodeModifiers\Schemas\ConvertArraysToCollectionsOptions.xsd">
+      <SubType>
+      </SubType>
+      <Generator>XsdCodeGenerator</Generator>
+      <LastGenOutput>ConvertArraysToCollectionsOptions.Generated.cs</LastGenOutput>
+      <CustomToolNamespace>CodeGeneration.CodeModifiers</CustomToolNamespace>
+    </Content>
+    <Content Include="CodeModifiers\Schemas\ModifyImportsOptions.xsd">
+      <SubType>
+      </SubType>
+      <Generator>XsdCodeGenerator</Generator>
+      <LastGenOutput>ModifyImportsOptions.Generated.cs</LastGenOutput>
+      <CustomToolNamespace>CodeGeneration.CodeModifiers</CustomToolNamespace>
+    </Content>
+    <Content Include="CodeModifiers\Schemas\RemoveSpecifiedTypesOptions.xsd">
+      <SubType>
+      </SubType>
+      <Generator>XsdCodeGenerator</Generator>
+      <LastGenOutput>RemoveSpecifiedTypesOptions.Generated.cs</LastGenOutput>
+      <CustomToolNamespace>CodeGeneration.CodeModifiers</CustomToolNamespace>
+    </Content>
+    <None Include="Generators\BaseCodeGeneratorOptions.xsd">
+      <SubType>
+      </SubType>
+      <Generator>XsdCodeGenerator</Generator>
+      <LastGenOutput>BaseCodeGeneratorOptions.Generated.cs</LastGenOutput>
+    </None>
+    <None Include="Generators\XsdClassGeneratorOptions.xsd">
+      <Generator>XsdToClasses</Generator>
+      <LastGenOutput>XsdClassGeneratorOptions.Generated.cs</LastGenOutput>
+      <SubType>
+      </SubType>
+    </None>
+    <None Include="Generators\XsdClassGeneratorOptions.xsx">
+      <DependentUpon>XsdClassGeneratorOptions.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\CodeGeneration.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CodeModifiers\Schemas\ConvertArraysToCollectionsOptions.Generated.xml">
+      <DependentUpon>ConvertArraysToCollectionsOptions.xsd</DependentUpon>
+    </None>
+    <None Include="CodeModifiers\Schemas\ImportFixerOptions.Generated.xml">
+      <DependentUpon>ImportFixerOptions.xsd</DependentUpon>
+    </None>
+    <Content Include="CodeModifiers\Options\ConvertArraysToCollectionsOptions.xml" />
+    <None Include="CodeModifiers\Schemas\ModifyImportsOptions.Generated.xml">
+      <DependentUpon>ModifyImportsOptions.xsd</DependentUpon>
+    </None>
+    <Content Include="CodeModifiers\Options\ModifyImportsOptions.xml" />
+    <None Include="CodeModifiers\Schemas\RemoveSpecifiedTypesOptions.Generated.xml">
+      <DependentUpon>RemoveSpecifiedTypesOptions.xsd</DependentUpon>
+    </None>
+    <Content Include="CodeModifiers\Options\RemoveSpecifiedTypesOptions.xml" />
+    <None Include="CodeModifiers\Schemas\RemoveXmlTypeAttributeOptions.Generated.xml">
+      <DependentUpon>RemoveXmlTypeAttributeOptions.xsd</DependentUpon>
+    </None>
+    <None Include="Generators\BaseCodeGeneratorOptions.Generated.xml">
+      <DependentUpon>BaseCodeGeneratorOptions.xsd</DependentUpon>
+    </None>
+    <None Include="Generators\XsdClassGeneratorOptions.Generated.xml">
+      <DependentUpon>XsdClassGeneratorOptions.xsd</DependentUpon>
+    </None>
+    <Content Include="CodeModifiers\Options\ImportFixerOptions.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="GPL.txt" />
+    <Content Include="CodeModifiers\Options\RemoveXmlTypeAttributeOptions.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

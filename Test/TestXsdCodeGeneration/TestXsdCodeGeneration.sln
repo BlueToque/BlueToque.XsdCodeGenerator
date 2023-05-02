@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestXsdCodeGeneration", "TestXsdCodeGeneration\TestXsdCodeGeneration.csproj", "{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeGeneration", "CodeGeneration.csproj", "{3038075D-63C6-495D-ACAC-6D1C0E31BF28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3038075D-63C6-495D-ACAC-6D1C0E31BF28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3038075D-63C6-495D-ACAC-6D1C0E31BF28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3038075D-63C6-495D-ACAC-6D1C0E31BF28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3038075D-63C6-495D-ACAC-6D1C0E31BF28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,23 @@
+﻿Release Notes:
+1.1.21.0:
+	Port to VS 2010
+1.0.21.0: 
+	Set the following defaults:
+		EnableDataBinding = true;
+        GenerateComplexTypes = true;
+		GenerateComplexTypesSpecified = true;
+        GenerateDebuggableCode = true;
+        GenerateProperties = true;
+        GenerateSoapTypes = false;
+
+1.0.20.0: 
+	Bug fix: parameters for DataBinding, order and Properties being set but not honoured
+
+1.0.19.0: 
+	Added paramters to config to enalbe and disable DataBinding, Order and Properties
+
+1.0.18.0	
+	
+	
+	
+        

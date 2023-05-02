@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XsdClassGeneratorOptions" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="XsdClassGeneratorOptions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="GenerateObjects" type="xs:boolean" minOccurs="0" />
+        <xs:element name="CompileAssembly" type="xs:boolean" minOccurs="0" />
+        <xs:element name="GenerateComplexTypes" type="xs:boolean" minOccurs="0" />
+        <xs:element name="GenerateCodeString" type="xs:boolean" minOccurs="0" />
+        <xs:any namespace="##any" processContents="skip" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

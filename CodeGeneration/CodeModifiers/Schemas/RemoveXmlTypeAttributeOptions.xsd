@@ -1,0 +1,18 @@
+﻿<xs:schema
+  targetNamespace="http://BlueToque.ca/CodeGeneration/CodeModifiers/RemoveXmlTypeAttribute.Options"
+  elementFormDefault="qualified"
+  xmlns="http://BlueToque.ca/CodeGeneration/CodeModifiers/RemoveXmlTypeAttribute.Options"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="RemoveXmlTypeAttributeOptions">
+    <xs:complexType> 
+      <xs:sequence>
+        <xs:element name="Type" type="ClassType1" maxOccurs="unbounded" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="ClassType1">
+    <xs:sequence />
+    <xs:attribute name="Name" type="xs:string" />
+  </xs:complexType>
+</xs:schema>

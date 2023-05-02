@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ConvertArraysToCollectionsOptions xmlns="http://BlueToque.ca/CodeGeneration/CodeModifiers/ConvertArraysToCollections.Options">
+  <Exclude Type ="" />
+  <Exclude Type ="" />
+  <Include Type ="" />
+</ConvertArraysToCollectionsOptions>

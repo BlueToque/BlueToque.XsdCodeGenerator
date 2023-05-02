@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema   id="VirtualPropertyOptions" 
+  targetNamespace="http://BlueToque.ca/CodeGeneration/CodeModifiers/PropertyGrid.Options" 
+  elementFormDefault="qualified" 
+  xmlns="http://BlueToque.ca/CodeGeneration/CodeModifiers/PropertyGrid.Options" 
+  xmlns:cmc="http://BlueToque.ca/CodeGeneration/CodeModifiers/Common"             
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:import namespace="http://BlueToque.ca/CodeGeneration/CodeModifiers/Common" schemaLocation="Common.xsd"/>
+
+  <xs:complexType name="PropertyGridType">
+    <xs:complexContent>
+      <xs:extension base="cmc:PropertyType">
+        <xs:attribute name="DisplayName" type="xs:string" use="optional"/>
+        <xs:attribute name="Category" type="xs:string" use="optional"/>
+        <xs:attribute name="Description" type="xs:string" use="optional"/>
+        <xs:attribute name="Editor" type="xs:string" use="optional"/>
+        <xs:attribute name="Browsable" type="xs:boolean"/>
+        <xs:attribute name="ReadOnly" type="xs:boolean"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:element name="PropertyGridOptions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Property" type="PropertyGridType" maxOccurs="unbounded" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>  
+
+</xs:schema>

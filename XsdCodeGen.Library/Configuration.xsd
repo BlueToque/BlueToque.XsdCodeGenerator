@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema 
+  id="Configuration" 
+  targetNamespace="http://BlueToque.ca/XsdToClasses.Configuration" 
+  elementFormDefault="qualified" 
+  xmlns="http://BlueToque.ca/XsdToClasses.Configuration" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="Configuration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="EnableDataBinding" type="xs:boolean" />
+        <xs:element name="GenerateOrder" type="xs:boolean" />
+        <xs:element name="GenerateProperties" type="xs:boolean" />
+        <xs:element name="GenerateComplexTypes" type="xs:boolean" minOccurs="0" />
+        <xs:element name="CodeModifiers" type="CodeModifiersType" minOccurs="0" />
+        <xs:element name="SchemaImporterExtensions" type="SchemaImporterExtensionsType" />
+        <xs:any namespace="##other" processContents="strict" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="CodeModifiersType">
+    <xs:sequence>
+      <xs:element name="CodeModifier" type="AssemblyType" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="AssemblyType">
+    <xs:sequence>
+      <xs:any namespace="##other" processContents="strict" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Any element from any namespace (options are specific to the CodeModifier)</xs:documentation>
+        </xs:annotation>
+      </xs:any>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="Type" type="xs:string" />
+    <xs:attribute name="Assembly" type="xs:string" />
+  </xs:complexType>
+  
+  <xs:complexType name="SchemaImporterExtensionsType">
+    <xs:sequence>
+      <xs:element name="SchemaImporterExtension" type="AssemblyType" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  
+</xs:schema>

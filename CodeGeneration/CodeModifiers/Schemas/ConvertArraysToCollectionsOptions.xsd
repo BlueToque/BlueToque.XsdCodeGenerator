@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema 
+  id="ConvertArraysToCollectionsOptions" 
+  targetNamespace="http://BlueToque.ca/CodeGeneration/CodeModifiers/ConvertArraysToCollections.Options" 
+  elementFormDefault="qualified" 
+  xmlns="http://BlueToque.ca/CodeGeneration/CodeModifiers/ConvertArraysToCollections.Options" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ConvertArraysToCollectionsOptions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Exclude" type="ExcludeType" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Include" type="IncludeType" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ExcludeType">
+    <xs:sequence />
+    <xs:attribute name="Type" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="IncludeType">
+    <xs:sequence />
+    <xs:attribute name="Type" type="xs:string" />
+  </xs:complexType>
+</xs:schema>
