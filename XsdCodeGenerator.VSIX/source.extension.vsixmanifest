@@ -8,7 +8,7 @@
         <License>Resources\GPL.rtf</License>
         <GettingStartedGuide>Resources\XsdCodeGenerator.docx</GettingStartedGuide>
         <ReleaseNotes>Resources\Release Notes.txt</ReleaseNotes>
-        <Icon>Resources\XSDSchemaToCode.ico</Icon>
+        <Icon>Resources\XSDSchemaToCode 128.png</Icon>
         <PreviewImage>Resources\preview 2.png</PreviewImage>
         <Tags>xml,xsd,code,generator,schema,CSharp</Tags>
     </Metadata>
