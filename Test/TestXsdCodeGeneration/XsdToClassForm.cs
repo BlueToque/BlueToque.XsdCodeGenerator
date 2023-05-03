@@ -20,9 +20,9 @@ namespace TestXsdCodeGeneration
             {
                 using (XmlReader reader = XmlReader.Create(myOpenSchemaDialog.FileName))
                 {
-                    m_schema = XmlSchema.Read(reader, new ValidationEventHandler(myValidationEventHandler));
+                    m_schema = XmlSchema.Read(reader, new ValidationEventHandler(ValidationEventHandler));
                     XmlSchemaSet set = new XmlSchemaSet();
-                    set.ValidationEventHandler += new ValidationEventHandler(myValidationEventHandler);
+                    set.ValidationEventHandler += new ValidationEventHandler(ValidationEventHandler);
                     set.Add(m_schema);
                     set.Compile();
                 }
@@ -49,7 +49,7 @@ namespace TestXsdCodeGeneration
 
         }
 
-        void myValidationEventHandler(object sender, ValidationEventArgs e)
+        void ValidationEventHandler(object sender, ValidationEventArgs e)
         {
             if (e.Severity == XmlSeverityType.Error)
                 throw e.Exception;
