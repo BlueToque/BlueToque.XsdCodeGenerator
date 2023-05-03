@@ -11,7 +11,7 @@ namespace BlueToque.XsdCodeGenerator
         public const string Name = "XsdCodeGenerator";
         public const string Description = @"Generate code from Xml Schema Documents";
         public const string Language = "en-US";
-        public const string Version = "2.23.502";
+        public const string Version = "2.23.503";
         public const string Author = "Blue Toque Software";
         public const string Tags = "xml,xsd,code,generator,schema,CSharp";
     }

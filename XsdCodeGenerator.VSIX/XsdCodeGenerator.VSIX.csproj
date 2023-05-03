@@ -81,6 +81,7 @@
     </Content>
     <Content Include="Resources\Release Notes.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Resources\XSDSchemaToCode.ico" />
     <None Include="Properties\BlueToque.XsdCodeGenerator.snk" />
