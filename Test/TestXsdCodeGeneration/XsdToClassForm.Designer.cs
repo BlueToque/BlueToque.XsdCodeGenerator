@@ -32,7 +32,7 @@ namespace TestXsdCodeGeneration
             this.myLoadXsdButton = new System.Windows.Forms.Button();
             this.myOpenSchemaDialog = new System.Windows.Forms.OpenFileDialog();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.myAssemblyTreeView = new AssemblyTreeView.AssemblyTreeView();
+            this.myAssemblyTreeView = new AssemblyTreeView();
             this.myCodeRichTextBox = new System.Windows.Forms.RichTextBox();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -57,7 +57,7 @@ namespace TestXsdCodeGeneration
             this.myLoadXsdButton.TabIndex = 4;
             this.myLoadXsdButton.Text = "Load";
             this.myLoadXsdButton.UseVisualStyleBackColor = true;
-            this.myLoadXsdButton.Click += new System.EventHandler(this.myLoadXsdButton_Click);
+            this.myLoadXsdButton.Click += new System.EventHandler(this.LoadXsdButton_Click);
             // 
             // myOpenSchemaDialog
             // 
@@ -85,7 +85,6 @@ namespace TestXsdCodeGeneration
             // 
             // myAssemblyTreeView
             // 
-            this.myAssemblyTreeView.Assembly = null;
             this.myAssemblyTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.myAssemblyTreeView.Location = new System.Drawing.Point(0, 0);
             this.myAssemblyTreeView.Name = "myAssemblyTreeView";
@@ -128,7 +127,7 @@ namespace TestXsdCodeGeneration
         private System.Windows.Forms.Button myLoadXsdButton;
         private System.Windows.Forms.OpenFileDialog myOpenSchemaDialog;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private AssemblyTreeView.AssemblyTreeView myAssemblyTreeView;
+        private AssemblyTreeView myAssemblyTreeView;
         private System.Windows.Forms.RichTextBox myCodeRichTextBox;
     }
 }

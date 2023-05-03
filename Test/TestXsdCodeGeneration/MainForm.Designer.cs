@@ -42,7 +42,7 @@ namespace TestXsdCodeGeneration
             this.myXsdToClassesButton.TabIndex = 0;
             this.myXsdToClassesButton.Text = "Xsd To Classes";
             this.myXsdToClassesButton.UseVisualStyleBackColor = true;
-            this.myXsdToClassesButton.Click += new System.EventHandler(this.myXsdToClassesButton_Click);
+            this.myXsdToClassesButton.Click += new System.EventHandler(this.XsdToClassesButton_Click);
             // 
             // myClassToXsdButton
             // 
@@ -54,7 +54,7 @@ namespace TestXsdCodeGeneration
             this.myClassToXsdButton.TabIndex = 1;
             this.myClassToXsdButton.Text = "Class To Xsd";
             this.myClassToXsdButton.UseVisualStyleBackColor = true;
-            this.myClassToXsdButton.Click += new System.EventHandler(this.myClassToXsdButton_Click);
+            this.myClassToXsdButton.Click += new System.EventHandler(this.ClassToXsdButton_Click);
             // 
             // MainForm
             // 

@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{0D5A2C9F-B3DE-466C-9053-69C992368D46}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{06A8E029-086B-4BEB-A492-19ABD0566FEA}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueToque.CodeGeneration", "CodeGeneration\BlueToque.CodeGeneration.csproj", "{3038075D-63C6-495D-ACAC-6D1C0E31BF28}"
 EndProject
@@ -16,6 +19,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XsdCodeGenerator.VSIX", "XsdCodeGenerator.VSIX\XsdCodeGenerator.VSIX.csproj", "{F273EF8E-E8FC-43AF-9CAC-D2F012D8A8F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XsdCodeGenerator.Test", "Test\XsdCodeGenerator.Test\XsdCodeGenerator.Test.csproj", "{68F1ACC5-B47A-409B-A420-3B2A57C0923C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestXsdCodeGeneration", "Test\TestXsdCodeGeneration\TestXsdCodeGeneration.csproj", "{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -127,12 +132,33 @@ Global
 		{68F1ACC5-B47A-409B-A420-3B2A57C0923C}.Release|x64.Build.0 = Release|Any CPU
 		{68F1ACC5-B47A-409B-A420-3B2A57C0923C}.Release|x86.ActiveCfg = Release|Any CPU
 		{68F1ACC5-B47A-409B-A420-3B2A57C0923C}.Release|x86.Build.0 = Release|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Debug|arm64.ActiveCfg = Debug|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Debug|arm64.Build.0 = Debug|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Debug|x64.Build.0 = Debug|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Debug|x86.Build.0 = Debug|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Release|arm64.ActiveCfg = Release|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Release|arm64.Build.0 = Release|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Release|x64.ActiveCfg = Release|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Release|x64.Build.0 = Release|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Release|x86.ActiveCfg = Release|Any CPU
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{68F1ACC5-B47A-409B-A420-3B2A57C0923C} = {0D5A2C9F-B3DE-466C-9053-69C992368D46}
+		{AAED16B6-97C9-4D69-B2A2-85B5A54AD184} = {0D5A2C9F-B3DE-466C-9053-69C992368D46}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9D35504E-D77B-4E83-8C47-32D4B3E1F5DD}

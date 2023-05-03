@@ -74,7 +74,7 @@ namespace TestXsdCodeGeneration
             this.myBrowseButton.TabIndex = 3;
             this.myBrowseButton.Text = "...";
             this.myBrowseButton.UseVisualStyleBackColor = true;
-            this.myBrowseButton.Click += new System.EventHandler(this.myBrowseButton_Click);
+            this.myBrowseButton.Click += new System.EventHandler(this.BrowseButton_Click);
             // 
             // myAssemblyNameLabel
             // 

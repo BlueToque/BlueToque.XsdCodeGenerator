@@ -1,26 +1,18 @@
+using CodeGeneration.Generators;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-using System.Xml.Schema;
-using System.Xml;
-using CodeGeneration;
 using System.Diagnostics;
+using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Schema;
 
 namespace TestXsdCodeGeneration
 {
     public partial class XsdToClassForm : Form
     {
-        public XsdToClassForm()
-        {
-            InitializeComponent();
-        }
+        public XsdToClassForm() => InitializeComponent();
 
         XmlSchema m_schema;
-        private void myLoadXsdButton_Click(object sender, EventArgs e)
+        private void LoadXsdButton_Click(object sender, EventArgs e)
         {
             if (myOpenSchemaDialog.ShowDialog(this) != DialogResult.OK) return;
 
@@ -45,9 +37,9 @@ namespace TestXsdCodeGeneration
             try
             {
                 XsdClassGenerator generator = new XsdClassGenerator(m_schema);
-                generator.SchemaImporterExtension.Add(new CodeGeneration.ImporterExtensions.SimpleTypeExtension());
+                generator.SchemaImporterExtensions.Add(new CodeGeneration.ImporterExtensions.SimpleTypeExtension());
                 generator.Compile();
-                myAssemblyTreeView.Assembly = generator.Assembly;
+                myAssemblyTreeView.SetAssembly(generator.Assembly);
                 myCodeRichTextBox.Text = generator.CodeString;
             }
             catch (Exception ex)

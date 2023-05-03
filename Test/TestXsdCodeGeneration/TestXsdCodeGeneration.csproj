@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -18,7 +18,7 @@
     </SccAuxPath>
     <SccProvider>
     </SccProvider>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
@@ -39,6 +39,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,6 +49,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -56,11 +58,11 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -71,6 +73,12 @@
     </Compile>
     <Compile Include="AssemblyResolveForm.Designer.cs">
       <DependentUpon>AssemblyResolveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssemblyTreeView.Designer.cs">
+      <DependentUpon>AssemblyTreeView.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassToXsdForm.cs">
       <SubType>Form</SubType>
@@ -90,9 +98,12 @@
       <SubType>Designer</SubType>
       <DependentUpon>AssemblyResolveForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AssemblyTreeView.resx">
+      <DependentUpon>AssemblyTreeView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClassToXsdForm.resx">
-      <SubType>Designer</SubType>
       <DependentUpon>ClassToXsdForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <SubType>Designer</SubType>
@@ -112,6 +123,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -129,12 +141,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CodeGeneration.csproj">
-      <Project>{3038075D-63C6-495D-ACAC-6D1C0E31BF28}</Project>
-      <Name>CodeGeneration</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
@@ -150,6 +156,16 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CodeGeneration\BlueToque.CodeGeneration.csproj">
+      <Project>{3038075d-63c6-495d-acac-6d1c0e31bf28}</Project>
+      <Name>BlueToque.CodeGeneration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\XsdCodeGen.Library\BlueToque.XsdCodeGen.Library.csproj">
+      <Project>{cc4936ae-1482-4f29-85cb-63e53b4b6304}</Project>
+      <Name>BlueToque.XsdCodeGen.Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

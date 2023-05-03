@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace TestXsdCodeGeneration
 {
     partial class ClassToXsdForm
@@ -33,7 +35,7 @@ namespace TestXsdCodeGeneration
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.mySchemaTabControl = new System.Windows.Forms.TabControl();
             this.myOpenAssemblyDialog = new System.Windows.Forms.OpenFileDialog();
-            this.myAssemblyTreeView = new AssemblyTreeView.AssemblyTreeView();
+            this.myAssemblyTreeView = new AssemblyTreeView();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -48,7 +50,7 @@ namespace TestXsdCodeGeneration
             this.myLoadAssemblyButton.TabIndex = 0;
             this.myLoadAssemblyButton.Text = "Load";
             this.myLoadAssemblyButton.UseVisualStyleBackColor = true;
-            this.myLoadAssemblyButton.Click += new System.EventHandler(this.myLoadAssemblyButton_Click);
+            this.myLoadAssemblyButton.Click += new System.EventHandler(this.LoadAssemblyButton_Click);
             // 
             // myAssemblyFileNameTextBox
             // 
@@ -94,14 +96,13 @@ namespace TestXsdCodeGeneration
             // 
             // myAssemblyTreeView
             // 
-            this.myAssemblyTreeView.Assembly = null;
             this.myAssemblyTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.myAssemblyTreeView.Location = new System.Drawing.Point(0, 0);
             this.myAssemblyTreeView.Name = "myAssemblyTreeView";
             this.myAssemblyTreeView.Size = new System.Drawing.Size(535, 248);
             this.myAssemblyTreeView.TabIndex = 1;
-            this.myAssemblyTreeView.TypeSelected += new AssemblyTreeView.TypeSelectedHandler(this.myAssemblyTreeView_TypeSelected);
-            this.myAssemblyTreeView.MethodSelected += new AssemblyTreeView.MethodSelectedHandler(this.myAssemblyTreeView_MethodSelected);
+            this.myAssemblyTreeView.TypeSelected += new TreeViewEventHandler(this.AssemblyTreeView_TypeSelected);
+            this.myAssemblyTreeView.MethodSelected += new TreeViewEventHandler(this.AssemblyTreeView_MethodSelected);
             // 
             // ClassToXsdForm
             // 
@@ -126,7 +127,7 @@ namespace TestXsdCodeGeneration
         #endregion
 
         private System.Windows.Forms.Button myLoadAssemblyButton;
-        private AssemblyTreeView.AssemblyTreeView myAssemblyTreeView;
+        private AssemblyTreeView myAssemblyTreeView;
         private System.Windows.Forms.TextBox myAssemblyFileNameTextBox;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.OpenFileDialog myOpenAssemblyDialog;
