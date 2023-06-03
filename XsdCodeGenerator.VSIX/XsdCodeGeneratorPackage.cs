@@ -9,12 +9,11 @@ namespace BlueToque.XsdCodeGenerator
 {
     [InstalledProductRegistration(Vsix.Name, Vsix.Description, Vsix.Version)]
     [Guid(Constants.PackageGuidString)]
-    [ProvideCodeGenerator(typeof(BlueToque.XsdCodeGen.Library.XsdCodeGenerator), Vsix.Name, Vsix.Description, true, RegisterCodeBase = true)]
+    [ProvideCodeGenerator(typeof(BlueToque.XsdCodeGenerator.XsdCodeGenerator), Vsix.Name, Vsix.Description, true, RegisterCodeBase = true)]
     [ProvideCodeGeneratorExtension(Vsix.Name, ".xsd")]
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
     public sealed class XsdCodeGeneratorPackage : AsyncPackage
     {
-        #region Package Members
 
         /// <summary>
         /// Initialization of the package; this method is called right after the package is sited, so this is the place
@@ -27,8 +26,6 @@ namespace BlueToque.XsdCodeGenerator
             // When initialized asynchronously, the current thread may be a background thread at this point.
             // Do any initialization that requires the UI thread after switching to the UI thread.
             await JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
-
-        #endregion
 
     }
 }

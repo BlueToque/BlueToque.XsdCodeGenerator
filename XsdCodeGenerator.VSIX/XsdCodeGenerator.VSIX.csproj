@@ -67,6 +67,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>source.extension.vsixmanifest</DependentUpon>
     </Compile>
+    <Compile Include="XsdCodeGenerator.cs" />
     <Compile Include="XsdCodeGeneratorPackage.cs" />
   </ItemGroup>
   <ItemGroup>
