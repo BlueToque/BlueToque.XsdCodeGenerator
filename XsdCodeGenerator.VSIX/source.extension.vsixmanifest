@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="XsdCodeGenerator.VSIX.95c78a75-2f0b-4ab6-a585-dac39bd81d10" Version="2.23.0503" Language="en-US" Publisher="Blue Toque Software" />
+        <Identity Id="XsdCodeGenerator.VSIX.95c78a75-2f0b-4ab6-a585-dac39bd81d10" Version="2.23.0608" Language="en-US" Publisher="Blue Toque Software" />
         <DisplayName>XsdCodeGenerator</DisplayName>
         <Description xml:space="preserve">Generate code from Xml Schema Documents</Description>
         <MoreInfo>https://github.com/BlueToque/BlueToque.XsdCodeGenerator</MoreInfo>
